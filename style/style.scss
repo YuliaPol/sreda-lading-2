@@ -1,0 +1,257 @@
+$fontpage: 'Montserrat';
+$fontcolor: '#0B132A';
+
+@import url("./../font/Montserrat/stylesheet.css");
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    font-family:  $fontpage;
+    color: $fontcolor;
+    font-size: 16px;
+    .intro {
+        position: relative;
+        background: linear-gradient(90deg, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+        min-height: 775px;
+        &::before {
+            content: "";
+            width: 250px;
+            height: 400px;
+            background: url(./../img/intro_1.svg);
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            top: 117px;
+            left: 0px;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            width: 700px;
+            height: 460px;
+            background: url(./../img/intro_2.svg);
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            top: 200px;
+            right: 0px;
+            z-index: 1; 
+        }
+        .logo {
+            position: absolute;
+            top: 55px;
+            left: 150px;
+            z-index: 100;
+        }
+        .text {
+            padding-top: 240px;
+            padding-left: 150px;
+            max-width: 690px;
+            position: relative;
+            z-index: 100;
+            .into_header {
+                font-family: $fontpage;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 64px;
+                line-height: 70px;
+                text-transform: uppercase;
+                color: $fontcolor;
+                text-shadow: 0px 4px 4px #FFFFFF;
+            }
+            .intro_info {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                font-family: $fontpage;
+                font-style: normal;
+                font-size: 32px;
+                line-height: 38px;
+                color: $fontcolor;
+                .info_col {
+                    .intro_label {
+                        font-weight: bold;
+                        display: inline-block;
+                    }
+                    .intro_value  {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .btn_wrapper {
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            text-transform: none;
+            outline: none;
+            &.btn_violet {
+                font-family: $fontpage;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 25px;
+                color: #FFFFFF;
+                padding: 20px 45px;
+                background: linear-gradient(180deg, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+                background-size: 200% 200%;
+                border-radius: 10px;
+                cursor: pointer;
+                background-position:100% 0%;
+                transition: background-position 0.3s ease-in;
+                &:hover {
+                    background-position:0% 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .page-wrapper {
+        .intro {
+            &::before {
+                width: 200px;
+                height: 300px;
+            }
+            &::after {
+                width: 450px;
+                height: 360px;
+            }
+            .text {
+                padding-top: 200px;
+                padding-left: 100px;
+            }
+            .logo {
+                left: 100px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .page-wrapper {
+        .intro {
+            min-height: 500px;
+            &::before {
+                width: 150px;
+                height: 250px;
+                top: 80px;
+            }
+            &::after {
+                width: 350px;
+                height: 300px;
+                top: 80px;
+            }
+            .text {
+                padding-top: 150px;
+                padding-left: 50px;
+                padding-right: 50px;
+                .into_header {
+                    font-size: 32px;
+                    line-height: 38px;
+                    max-width: 300px;
+                }
+                .intro_info {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .logo {
+                top: 20px;
+                left: 50px;
+                img {
+                    width: 110px;
+                }
+            }
+        }
+        .btn_wrapper {
+            .btn {
+                &.btn_violet {
+                    font-size: 14px;
+                    line-height: 16px;
+                    padding: 10px 25px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .page-wrapper {
+        .intro {
+            min-height: auto;
+            &::before {
+                width: 100px;
+                height: 200px;
+                top: 50px;
+            }
+            &::after {
+                width: 250px;
+                height: 200px;
+                top: 170px;
+            }
+            .text {
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 100px;
+                padding-bottom: 80px;
+                .into_header {
+                    font-size: 28px;
+                    line-height: 32px;
+                }
+            }
+            .logo {
+                left: 30px;
+                img {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}

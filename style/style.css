@@ -1,0 +1,270 @@
+@import url("./../font/Montserrat/stylesheet.css");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Montserrat";
+  color: "#0B132A";
+  font-size: 16px;
+}
+
+.page-wrapper .intro {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-1.37%, #DEDEDE), color-stop(32.73%, rgba(223, 223, 223, 0.96788)), color-stop(68.04%, rgba(241, 241, 241, 0.410744)), color-stop(91.77%, rgba(244, 244, 244, 0.32919)), to(#FDFCFC));
+  background: -webkit-linear-gradient(left, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  background: -o-linear-gradient(left, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  background: linear-gradient(90deg, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  min-height: 775px;
+}
+
+.page-wrapper .intro::before {
+  content: "";
+  width: 250px;
+  height: 400px;
+  background: url(./../img/intro_1.svg);
+  background-position: left;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: 117px;
+  left: 0px;
+  z-index: 1;
+}
+
+.page-wrapper .intro::after {
+  content: "";
+  width: 700px;
+  height: 460px;
+  background: url(./../img/intro_2.svg);
+  background-position: right;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: 200px;
+  right: 0px;
+  z-index: 1;
+}
+
+.page-wrapper .intro .logo {
+  position: absolute;
+  top: 55px;
+  left: 150px;
+  z-index: 100;
+}
+
+.page-wrapper .intro .text {
+  padding-top: 240px;
+  padding-left: 150px;
+  max-width: 690px;
+  position: relative;
+  z-index: 100;
+}
+
+.page-wrapper .intro .text .into_header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: "#0B132A";
+  text-shadow: 0px 4px 4px #FFFFFF;
+}
+
+.page-wrapper .intro .text .intro_info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 32px;
+  line-height: 38px;
+  color: "#0B132A";
+}
+
+.page-wrapper .intro .text .intro_info .info_col .intro_label {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.page-wrapper .intro .text .intro_info .info_col .intro_value {
+  display: inline-block;
+}
+
+.page-wrapper .btn_wrapper .btn {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  text-transform: none;
+  outline: none;
+}
+
+.page-wrapper .btn_wrapper .btn.btn_violet {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  color: #FFFFFF;
+  padding: 20px 45px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#49C8FE), color-stop(50%, #E858FD), to(#49C8FE));
+  background: -webkit-linear-gradient(top, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+  background: -o-linear-gradient(top, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+  background: linear-gradient(180deg, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+  -webkit-background-size: 200% 200%;
+          background-size: 200% 200%;
+  border-radius: 10px;
+  cursor: pointer;
+  background-position: 100% 0%;
+  -webkit-transition: background-position 0.3s ease-in;
+  -o-transition: background-position 0.3s ease-in;
+  transition: background-position 0.3s ease-in;
+}
+
+.page-wrapper .btn_wrapper .btn.btn_violet:hover {
+  background-position: 0% 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .page-wrapper .intro::before {
+    width: 200px;
+    height: 300px;
+  }
+  .page-wrapper .intro::after {
+    width: 450px;
+    height: 360px;
+  }
+  .page-wrapper .intro .text {
+    padding-top: 200px;
+    padding-left: 100px;
+  }
+  .page-wrapper .intro .logo {
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-wrapper .intro {
+    min-height: 500px;
+  }
+  .page-wrapper .intro::before {
+    width: 150px;
+    height: 250px;
+    top: 80px;
+  }
+  .page-wrapper .intro::after {
+    width: 350px;
+    height: 300px;
+    top: 80px;
+  }
+  .page-wrapper .intro .text {
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .page-wrapper .intro .text .into_header {
+    font-size: 32px;
+    line-height: 38px;
+    max-width: 300px;
+  }
+  .page-wrapper .intro .text .intro_info {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .page-wrapper .intro .logo {
+    top: 20px;
+    left: 50px;
+  }
+  .page-wrapper .intro .logo img {
+    width: 110px;
+  }
+  .page-wrapper .btn_wrapper .btn.btn_violet {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page-wrapper .intro {
+    min-height: auto;
+  }
+  .page-wrapper .intro::before {
+    width: 100px;
+    height: 200px;
+    top: 50px;
+  }
+  .page-wrapper .intro::after {
+    width: 250px;
+    height: 200px;
+    top: 170px;
+  }
+  .page-wrapper .intro .text {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  .page-wrapper .intro .text .into_header {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .page-wrapper .intro .logo {
+    left: 30px;
+  }
+  .page-wrapper .intro .logo img {
+    width: 80px;
+  }
+}
