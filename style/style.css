@@ -49,6 +49,11 @@ table {
   border-spacing: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .page-wrapper {
   width: 100%;
   min-height: 100vh;
@@ -70,7 +75,7 @@ table {
   content: "";
   width: 250px;
   height: 400px;
-  background: url(./../img/intro_1.svg);
+  background: url(./../img/intro_1.png);
   background-position: left;
   -webkit-background-size: contain;
           background-size: contain;
@@ -86,7 +91,7 @@ table {
   content: "";
   width: 700px;
   height: 460px;
-  background: url(./../img/intro_2.svg);
+  background: url(./../img/intro_2.png);
   background-position: right;
   -webkit-background-size: contain;
           background-size: contain;
@@ -143,6 +148,168 @@ table {
   display: inline-block;
 }
 
+.page-wrapper .playLearn {
+  background: #010000;
+  width: 100%;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 150px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.page-wrapper .playLearn::before {
+  content: "";
+  width: 300px;
+  height: 460px;
+  position: absolute;
+  background: url(./../img/playLearn_1.png);
+  background-position: left;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  left: 0px;
+  z-index: 1;
+  bottom: 0px;
+}
+
+.page-wrapper .playLearn::after {
+  content: "";
+  width: 280px;
+  height: 360px;
+  position: absolute;
+  background: url(./../img/playLearn_2.png);
+  background-position: right;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  right: 0px;
+  top: 80px;
+  z-index: 1;
+}
+
+.page-wrapper .playLearn .playLearn_header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px #000000;
+  color: #FFFFFF;
+  padding-bottom: 40px;
+}
+
+.page-wrapper .playLearn .playLearn_blocks {
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  max-width: 1120px;
+  margin: auto;
+}
+
+.page-wrapper .playLearn .playLearn_blocks .playLearn_item {
+  padding: 20px;
+  width: 33%;
+}
+
+.page-wrapper .playLearn .playLearn_blocks .playLearn_item:nth-child(1) .playLearn_block::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url(./../img/greyCircle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  position: absolute;
+  top: 46px;
+  left: 58px;
+  z-index: 1;
+}
+
+.page-wrapper .playLearn .playLearn_blocks .playLearn_item:nth-child(2) .playLearn_block::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url(./../img/greyCircle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  position: absolute;
+  top: 40px;
+  left: 19px;
+  z-index: 1;
+}
+
+.page-wrapper .playLearn .playLearn_blocks .playLearn_item:nth-child(3) .playLearn_block::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url(./../img/greyCircle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  position: absolute;
+  top: 90px;
+  left: 100px;
+  z-index: 1;
+}
+
+.page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block {
+  height: 100%;
+  padding: 70px 30px 30px;
+  background: url(./../img/playLearn_block.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+}
+
+.page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block .playLearn_block_header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 23px;
+  line-height: 28px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-transform: capitalize;
+  color: "#0B132A";
+  padding-bottom: 18px;
+  position: relative;
+  z-index: 50;
+}
+
+.page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block .playLearn_block_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F5665;
+  position: relative;
+  z-index: 50;
+}
+
 .page-wrapper .btn_wrapper .btn {
   display: inline-block;
   text-decoration: none;
@@ -177,6 +344,18 @@ table {
   background-position: 0% 100%;
 }
 
+@media screen and (max-width: 1400px) {
+  .page-wrapper .playLearn {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block {
+    padding: 40px 15px 20px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .page-wrapper .intro::before {
     width: 200px;
@@ -192,6 +371,56 @@ table {
   }
   .page-wrapper .intro .logo {
     left: 100px;
+  }
+  .page-wrapper .playLearn {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .page-wrapper .playLearn::before {
+    content: "";
+    width: 250px;
+    height: 400px;
+  }
+  .page-wrapper .playLearn::after {
+    content: "";
+    width: 230px;
+    height: 300px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item {
+    padding: 10px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block {
+    padding: 40px 15px 20px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block .playLearn_block_header {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page-wrapper .playLearn {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .page-wrapper .playLearn::before {
+    content: "";
+    width: 200px;
+    height: 300px;
+  }
+  .page-wrapper .playLearn::after {
+    content: "";
+    width: 200px;
+    height: 250px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item {
+    padding: 10px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block {
+    padding: 30px 10px 20px;
   }
 }
 
@@ -230,10 +459,79 @@ table {
   .page-wrapper .intro .logo img {
     width: 110px;
   }
+  .page-wrapper .playLearn {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .page-wrapper .playLearn::before {
+    content: "";
+    width: 200px;
+    height: 300px;
+  }
+  .page-wrapper .playLearn::after {
+    content: "";
+    width: 200px;
+    height: 250px;
+  }
+  .page-wrapper .playLearn .playLearn_header {
+    font-size: 32px;
+    line-height: 38px;
+    padding-bottom: 20px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item {
+    padding: 10px;
+    width: 50%;
+  }
   .page-wrapper .btn_wrapper .btn.btn_violet {
     font-size: 14px;
     line-height: 16px;
     padding: 10px 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-wrapper .playLearn {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .page-wrapper .playLearn::before {
+    content: "";
+    width: 150px;
+    height: 200px;
+  }
+  .page-wrapper .playLearn::after {
+    content: "";
+    width: 150px;
+    height: 200px;
+  }
+  .page-wrapper .playLearn .playLearn_header {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .page-wrapper .playLearn .playLearn_blocks {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page-wrapper .playLearn .playLearn_blocks .playLearn_item {
+    padding: 10px;
+    width: 100%;
   }
 }
 
