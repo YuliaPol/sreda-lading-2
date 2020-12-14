@@ -58,8 +58,13 @@ table {
   width: 100%;
   min-height: 100vh;
   font-family: "Montserrat";
-  color: "#0B132A";
+  color: #0B132A;
   font-size: 16px;
+}
+
+.page-wrapper .section_content {
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
 .page-wrapper .intro {
@@ -112,7 +117,6 @@ table {
 
 .page-wrapper .intro .text {
   padding-top: 240px;
-  padding-left: 150px;
   max-width: 690px;
   position: relative;
   z-index: 100;
@@ -125,7 +129,7 @@ table {
   font-size: 64px;
   line-height: 70px;
   text-transform: uppercase;
-  color: "#0B132A";
+  color: #0B132A;
   text-shadow: 0px 4px 4px #FFFFFF;
 }
 
@@ -136,7 +140,7 @@ table {
   font-style: normal;
   font-size: 32px;
   line-height: 38px;
-  color: "#0B132A";
+  color: #0B132A;
 }
 
 .page-wrapper .intro .text .intro_info .info_col .intro_label {
@@ -154,8 +158,6 @@ table {
   position: relative;
   padding-top: 120px;
   padding-bottom: 150px;
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 .page-wrapper .playLearn::before {
@@ -216,13 +218,14 @@ table {
   -webkit-justify-content: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-  max-width: 1120px;
-  margin: auto;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .page-wrapper .playLearn .playLearn_blocks .playLearn_item {
   padding: 20px;
-  width: 33%;
+  width: 33.3%;
 }
 
 .page-wrapper .playLearn .playLearn_blocks .playLearn_item:nth-child(1) .playLearn_block::before {
@@ -293,7 +296,7 @@ table {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   text-transform: capitalize;
-  color: "#0B132A";
+  color: #0B132A;
   padding-bottom: 18px;
   position: relative;
   z-index: 50;
@@ -308,6 +311,176 @@ table {
   color: #4F5665;
   position: relative;
   z-index: 50;
+}
+
+.page-wrapper .queen {
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-1.37%, #DEDEDE), color-stop(32.73%, rgba(223, 223, 223, 0.96788)), color-stop(68.04%, rgba(241, 241, 241, 0.410744)), color-stop(91.77%, rgba(244, 244, 244, 0.32919)), to(#FDFCFC));
+  background: -webkit-linear-gradient(left, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  background: -o-linear-gradient(left, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  background: linear-gradient(90deg, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-wrapper .queen::before {
+  content: "";
+  position: absolute;
+  background: url(./../img/queen_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  bottom: 120px;
+  left: 20px;
+  width: 310px;
+  height: 235px;
+  z-index: 1;
+}
+
+.page-wrapper .queen::after {
+  content: "";
+  position: absolute;
+  background: url(./../img/queen_2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  top: 40px;
+  right: 88px;
+  width: 240px;
+  height: 215px;
+  z-index: 1;
+}
+
+.page-wrapper .queen .queen_row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 100;
+  padding-bottom: 60px;
+}
+
+.page-wrapper .queen .queen_row .queen_video {
+  width: 50%;
+  padding-right: 60px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.page-wrapper .queen .queen_row .queen_video .queen_wrraperGif {
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  right: -100px;
+  bottom: -150px;
+  z-index: 100;
+}
+
+.page-wrapper .queen .queen_row .queen_video .queen_wrraperGif .queen_gif {
+  position: absolute;
+  background: url(./../img/queen_crop.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  width: 267px;
+  height: 326px;
+}
+
+.page-wrapper .queen .queen_row .queen_video .queen_wrraperGif .queen_gif .queen_gif_close {
+  position: absolute;
+  top: -23px;
+  right: -23px;
+  width: 46px;
+  height: 46px;
+  background: #FEFEFE;
+  -webkit-box-shadow: 0px 6px 7px rgba(70, 128, 255, 0.1);
+          box-shadow: 0px 6px 7px rgba(70, 128, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.page-wrapper .queen .queen_row .queen_video .queen_wrraperGif .queen_gif .queen_gif_close .icon_close {
+  background: url(./../img/icon_close.png);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 14px 14px;
+          background-size: 14px 14px;
+}
+
+.page-wrapper .queen .queen_row .queen_video .video_wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  z-index: 50;
+}
+
+.page-wrapper .queen .queen_row .queen_video .video_wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-wrapper .queen .queen_row .queen_info {
+  width: 50%;
+}
+
+.page-wrapper .queen .queen_row .queen_info .queen_info_header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #0B132A;
+  padding-bottom: 25px;
+}
+
+.page-wrapper .queen .queen_row .queen_info .queen_info_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0B132A;
+}
+
+.page-wrapper .queen .queen_row .queen_info .queen_info_text .bold {
+  font-weight: 700;
+}
+
+.page-wrapper .queen .queen_row .queen_info .queen_info_text .blue {
+  color: #49C8FE;
+}
+
+.page-wrapper .queen .queen_row .queen_info .queen_info_text .pink {
+  color: #E858FD;
+}
+
+.page-wrapper .queen .btn_wrapper {
+  position: relative;
+  z-index: 120;
+  text-align: center;
 }
 
 .page-wrapper .btn_wrapper .btn {
@@ -338,25 +511,45 @@ table {
   -webkit-transition: background-position 0.3s ease-in;
   -o-transition: background-position 0.3s ease-in;
   transition: background-position 0.3s ease-in;
+  min-width: 317px;
+  text-align: center;
+  max-width: 100%;
 }
 
 .page-wrapper .btn_wrapper .btn.btn_violet:hover {
   background-position: 0% 100%;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
+  .page-wrapper .section_content {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .page-wrapper .section_content {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
   .page-wrapper .playLearn {
     padding-top: 80px;
     padding-bottom: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
   }
   .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block {
     padding: 40px 15px 20px;
   }
+  .page-wrapper .queen .queen_row .queen_video .queen_wrraperGif .queen_gif {
+    width: 213px;
+    height: 260px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  .page-wrapper .section_content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
   .page-wrapper .intro::before {
     width: 200px;
     height: 300px;
@@ -367,7 +560,6 @@ table {
   }
   .page-wrapper .intro .text {
     padding-top: 200px;
-    padding-left: 100px;
   }
   .page-wrapper .intro .logo {
     left: 100px;
@@ -375,8 +567,6 @@ table {
   .page-wrapper .playLearn {
     padding-top: 80px;
     padding-bottom: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
   }
   .page-wrapper .playLearn::before {
     content: "";
@@ -397,14 +587,47 @@ table {
   .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block .playLearn_block_header {
     font-size: 18px;
   }
+  .page-wrapper .queen {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  .page-wrapper .queen::before {
+    bottom: 100px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+  }
+  .page-wrapper .queen::after {
+    top: 40px;
+    right: 68px;
+    width: 200px;
+    height: 150px;
+  }
+  .page-wrapper .queen .queen_row .queen_video {
+    padding-right: 30px;
+  }
+  .page-wrapper .queen .queen_row .queen_video .queen_wrraperGif .queen_gif {
+    width: 213px;
+    height: 260px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_header {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_text {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .page-wrapper .section_content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .page-wrapper .playLearn {
     padding-top: 50px;
     padding-bottom: 70px;
-    padding-left: 30px;
-    padding-right: 30px;
   }
   .page-wrapper .playLearn::before {
     content: "";
@@ -422,9 +645,38 @@ table {
   .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block {
     padding: 30px 10px 20px;
   }
+  .page-wrapper .queen {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .page-wrapper .queen .queen_row .queen_video {
+    padding-right: 20px;
+  }
+  .page-wrapper .queen .queen_row .queen_video .queen_wrraperGif {
+    top: -8px;
+    left: -50px;
+    right: -50px;
+    bottom: -80px;
+  }
+  .page-wrapper .queen .queen_row .queen_video .queen_wrraperGif .queen_gif {
+    width: 170px;
+    height: 208px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_header {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_text {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .page-wrapper .section_content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .page-wrapper .intro {
     min-height: 500px;
   }
@@ -440,8 +692,6 @@ table {
   }
   .page-wrapper .intro .text {
     padding-top: 150px;
-    padding-left: 50px;
-    padding-right: 50px;
   }
   .page-wrapper .intro .text .into_header {
     font-size: 32px;
@@ -462,8 +712,6 @@ table {
   .page-wrapper .playLearn {
     padding-top: 50px;
     padding-bottom: 70px;
-    padding-left: 30px;
-    padding-right: 30px;
   }
   .page-wrapper .playLearn::before {
     content: "";
@@ -488,23 +736,68 @@ table {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
   }
   .page-wrapper .playLearn .playLearn_blocks .playLearn_item {
     padding: 10px;
     width: 50%;
   }
+  .page-wrapper .queen {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .page-wrapper .queen::before {
+    bottom: 60px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+  }
+  .page-wrapper .queen::after {
+    top: 40px;
+    right: 28px;
+    width: 150px;
+    height: 100px;
+  }
+  .page-wrapper .queen .queen_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .page-wrapper .queen .queen_row .queen_video {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .page-wrapper .queen .queen_row .queen_info {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_header {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_text {
+    font-size: 14px;
+    line-height: 18px;
+  }
   .page-wrapper .btn_wrapper .btn.btn_violet {
     font-size: 14px;
     line-height: 16px;
     padding: 10px 25px;
+    min-width: 200px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .page-wrapper .playLearn {
-    padding-bottom: 50px;
+  .page-wrapper .section_content {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .page-wrapper .playLearn {
+    padding-bottom: 50px;
   }
   .page-wrapper .playLearn::before {
     content: "";
@@ -550,8 +843,6 @@ table {
     top: 170px;
   }
   .page-wrapper .intro .text {
-    padding-left: 30px;
-    padding-right: 30px;
     padding-top: 100px;
     padding-bottom: 80px;
   }
@@ -564,5 +855,17 @@ table {
   }
   .page-wrapper .intro .logo img {
     width: 80px;
+  }
+  .page-wrapper .queen .queen_row .queen_video .queen_wrraperGif .queen_gif {
+    width: 102px;
+    height: 124px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_header {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .page-wrapper .queen .queen_row .queen_info .queen_info_text {
+    font-size: 14px;
+    line-height: 18px;
   }
 }

@@ -1,5 +1,5 @@
 $fontpage: 'Montserrat';
-$fontcolor: '#0B132A';
+$fontcolor: #0B132A;
 
 @import url("./../font/Montserrat/stylesheet.css");
 
@@ -55,6 +55,10 @@ table {
     font-family:  $fontpage;
     color: $fontcolor;
     font-size: 16px;
+    .section_content {
+        padding-left: 250px;
+        padding-right: 250px;
+    }
     .intro {
         position: relative;
         background: linear-gradient(90deg, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
@@ -95,7 +99,6 @@ table {
         }
         .text {
             padding-top: 240px;
-            padding-left: 150px;
             max-width: 690px;
             position: relative;
             z-index: 100;
@@ -135,8 +138,6 @@ table {
         position: relative;
         padding-top: 120px;
         padding-bottom: 150px;
-        padding-left: 100px;
-        padding-right: 100px;
         &::before {
             content: "";
             width: 300px;
@@ -181,11 +182,12 @@ table {
             display: flex;
             align-items: stretch;
             justify-content: stretch;
-            max-width: 1120px;
-            margin: auto;
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            margin-right: -20px;
             .playLearn_item {
                 padding: 20px;
-                width: 33%;
+                width: 33.3%;
                 &:nth-child(1){
                     .playLearn_block {
                         &::before {
@@ -274,6 +276,139 @@ table {
             }
         }
     }
+    .queen {
+        padding-top: 160px;
+        padding-bottom: 100px;
+        background: linear-gradient(90deg, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(./../img/queen_1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 120px;
+            left: 20px;
+            width: 310px;
+            height: 235px;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            background: url(./../img/queen_2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 40px;
+            right: 88px;
+            width: 240px;
+            height: 215px;
+            z-index: 1;
+        }
+        .queen_row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            z-index: 100;
+            padding-bottom: 60px;
+            .queen_video {
+                width: 50%;
+                padding-right: 60px;
+                padding-top: 20px;
+                position: relative;
+                .queen_wrraperGif {
+                    position: absolute;
+                    top: -100px;
+                    left: -150px;
+                    right: -100px;
+                    bottom: -150px;
+                    z-index: 100;
+                    .queen_gif {
+                        position: absolute;
+                        background: url(./../img/queen_crop.gif);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 267px;
+                        height: 326px;
+                        .queen_gif_close {
+                            position: absolute;
+                            top: -23px;
+                            right: -23px;
+                            width: 46px;
+                            height: 46px;
+                            background: #FEFEFE;
+                            box-shadow: 0px 6px 7px rgba(70, 128, 255, 0.1);
+                            border-radius: 50%;
+                            cursor: pointer;
+                            .icon_close {
+                                background: url(./../img/icon_close.png);
+                                width: 100%;
+                                height: 100%;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 14px 14px;
+                            }
+                        }
+                    }
+                }
+                .video_wrap {
+                    position: relative;
+                    padding-bottom: 56.25%; /* 16:9 */
+                    height: 0;
+                    z-index: 50;
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .queen_info {
+                width: 50%;
+                .queen_info_header {
+                    font-family: $fontpage;
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 32px;
+                    line-height: 39px;
+                    text-transform: uppercase;
+                    color: $fontcolor;
+                    padding-bottom: 25px;
+                }
+                .queen_info_text {
+                    font-family: $fontpage;
+                    font-style: normal;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: $fontcolor;
+                    .bold {
+                        font-weight: 700;
+                    }
+                    .blue {
+                        color: #49C8FE;
+                    }
+                    .pink {
+                        color: #E858FD;
+                    }
+                }
+            }
+        }
+        .btn_wrapper {
+            position: relative;
+            z-index: 120;
+            text-align: center;
+        }
+    }
     .btn_wrapper {
         .btn {
             display: inline-block;
@@ -295,6 +430,9 @@ table {
                 cursor: pointer;
                 background-position:100% 0%;
                 transition: background-position 0.3s ease-in;
+                min-width: 317px;
+                text-align: center;
+                max-width: 100%;
                 &:hover {
                     background-position:0% 100%;
                 }
@@ -302,13 +440,25 @@ table {
         }
     }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
     .page-wrapper {
+        .section_content {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .page-wrapper {
+        .section_content {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
         .playLearn {
             padding-top: 80px;
             padding-bottom: 100px;
-            padding-left: 50px;
-            padding-right: 50px;
+            // padding-left: 50px;
+            // padding-right: 50px;
             .playLearn_blocks {
                 .playLearn_item {
                     .playLearn_block {
@@ -317,10 +467,26 @@ table {
                 }
             }
         }
+        .queen {
+            .queen_row {
+                .queen_video {
+                    .queen_wrraperGif {
+                        .queen_gif{
+                            width: 213px;
+                            height: 260px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 1200px) {
     .page-wrapper {
+        .section_content {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
         .intro {
             &::before {
                 width: 200px;
@@ -332,7 +498,6 @@ table {
             }
             .text {
                 padding-top: 200px;
-                padding-left: 100px;
             }
             .logo {
                 left: 100px;
@@ -341,8 +506,6 @@ table {
         .playLearn {
             padding-top: 80px;
             padding-bottom: 100px;
-            padding-left: 50px;
-            padding-right: 50px;
             &::before {
                 content: "";
                 width: 250px;
@@ -365,15 +528,55 @@ table {
                 }
             }
         }
+        .queen {
+            padding-top: 100px;
+            padding-bottom: 80px;
+            &::before {
+                bottom: 100px;
+                left: 20px;
+                width: 200px;
+                height: 200px;
+            
+            }
+            &::after {
+                top: 40px;
+                right: 68px;
+                width: 200px;
+                height: 150px;
+            }
+            .queen_row {
+                .queen_video {
+                    padding-right: 30px;
+                    .queen_wrraperGif {
+                        .queen_gif{
+                            width: 213px;
+                            height: 260px;
+                        }
+                    }
+                }
+                .queen_info {
+                    .queen_info_header {
+                        font-size: 28px;
+                        line-height: 32px;
+                    }
+                    .queen_info_text {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 992px) {
     .page-wrapper {
+        .section_content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
         .playLearn {
             padding-top: 50px;
             padding-bottom: 70px;
-            padding-left: 30px;
-            padding-right: 30px;
             &::before {
                 content: "";
                 width: 200px;
@@ -393,10 +596,43 @@ table {
                 }
             }
         }
+        .queen {
+            padding-top: 80px;
+            padding-bottom: 60px;
+            .queen_row {
+                .queen_video {
+                    padding-right: 20px;
+                    .queen_wrraperGif {
+                        top: -8px;
+                        left: -50px;
+                        right: -50px;
+                        bottom: -80px;
+                        .queen_gif{
+                            width: 170px;
+                            height: 208px;
+                        }
+                    }
+                }
+                .queen_info {
+                    .queen_info_header {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                    .queen_info_text {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 768px) {
     .page-wrapper {
+        .section_content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
         .intro {
             min-height: 500px;
             &::before {
@@ -411,8 +647,6 @@ table {
             }
             .text {
                 padding-top: 150px;
-                padding-left: 50px;
-                padding-right: 50px;
                 .into_header {
                     font-size: 32px;
                     line-height: 38px;
@@ -434,8 +668,6 @@ table {
         .playLearn {
             padding-top: 50px;
             padding-bottom: 70px;
-            padding-left: 30px;
-            padding-right: 30px;
             &::before {
                 content: "";
                 width: 200px;
@@ -454,9 +686,48 @@ table {
             .playLearn_blocks {
                 flex-wrap: wrap;
                 justify-content: center;
+                width: calc(100% + 20px);
+                margin-left: -10px;
+                margin-right: -10px;
                 .playLearn_item {
                     padding: 10px;
                     width: 50%;
+                }
+            }
+        }
+        .queen {
+            padding-top: 60px;
+            padding-bottom: 40px;
+            &::before {
+                bottom: 60px;
+                left: 20px;
+                width: 150px;
+                height: 150px;
+            
+            }
+            &::after {
+                top: 40px;
+                right: 28px;
+                width: 150px;
+                height: 100px;
+            }
+            .queen_row {
+                flex-direction: column-reverse;
+                .queen_video {
+                    width: 100%;
+                    padding-right: 0px;
+                }
+                .queen_info {
+                    width: 100%;
+                    padding-bottom: 20px;
+                    .queen_info_header {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                    .queen_info_text {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
                 }
             }
         }
@@ -466,6 +737,7 @@ table {
                     font-size: 14px;
                     line-height: 16px;
                     padding: 10px 25px;
+                    min-width: 200px;
                 }
             }
         }
@@ -473,10 +745,12 @@ table {
 }
 @media screen and (max-width: 600px) {
     .page-wrapper {
-        .playLearn {
-            padding-bottom: 50px;
+        .section_content {
             padding-left: 20px;
             padding-right: 20px;
+        }
+        .playLearn {
+            padding-bottom: 50px;
             &::before {
                 content: "";
                 width: 150px;
@@ -517,8 +791,6 @@ table {
                 top: 170px;
             }
             .text {
-                padding-left: 30px;
-                padding-right: 30px;
                 padding-top: 100px;
                 padding-bottom: 80px;
                 .into_header {
@@ -530,6 +802,28 @@ table {
                 left: 30px;
                 img {
                     width: 80px;
+                }
+            }
+        }
+        .queen {
+            .queen_row {
+                .queen_video {
+                    .queen_wrraperGif {
+                        .queen_gif {
+                            width: 102px;
+                            height: 124px;
+                        }
+                    }
+                }
+                .queen_info {
+                    .queen_info_header {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    .queen_info_text {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
                 }
             }
         }
