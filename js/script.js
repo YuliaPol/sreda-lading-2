@@ -6,6 +6,33 @@ jQuery(function ($) {
         $('.page-wrapper').on('click' ,'.queen_gif ', function(e){
              queenGif.stop();
              $(this).parents('.queen_wrraperGif').remove();
-        })
+        });
+
+        $('.slider_container').slick({
+            infinite: true,
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1920,
+                    settings: {
+                      slidesToShow: 3,
+                    }
+                },
+                {
+                  breakpoint: 993,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                  }
+                }
+            ],
+        });
     });
 });
