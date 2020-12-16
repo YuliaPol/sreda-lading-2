@@ -1161,6 +1161,7 @@ html {
 .page-wrapper .screenshots .screenshots_slider .screenshots_item {
   width: 100%;
   padding: 12px;
+  outline: none;
 }
 
 .page-wrapper .screenshots .screenshots_slider .screenshots_item img {
