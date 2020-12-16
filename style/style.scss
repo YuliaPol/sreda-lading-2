@@ -597,6 +597,42 @@ html {
                                 display: block;
                             }
                         }
+                        &.icon_experience {
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                background: url(./../img/icon-experience.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 46px;
+                                display: block;
+                            }
+                        }
+                        &.icon_path {
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                background: url(./../img/icon-path.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 48px;
+                                display: block;
+                            }
+                        }
+                        &.icon_diploma {
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                background: url(./../img/icon-diploma.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 50px;
+                                display: block;
+                            }
+                        }
                     }
                     .item_header {
                         font-family: $fontpage;
