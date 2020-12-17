@@ -59,6 +59,33 @@ jQuery(function ($) {
                 }
               }
           ],
+        });
+        $('.speaker-slider').slick({
+          infinite: true,
+          dots: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          customPaging: 50,
+          responsive: [
+              {
+                  breakpoint: 1920,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+              },
+              {
+                breakpoint: 993,
+                settings: {
+                  slidesToShow: 2,
+                }
+              },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 1,
+                }
+              }
+          ],
       });
     });
 });
