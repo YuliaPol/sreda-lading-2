@@ -1787,6 +1787,11 @@ html {
           background-size: contain;
 }
 
+.page-wrapper .speaker .btn_wrapper {
+  padding-top: 150px;
+  text-align: center;
+}
+
 .page-wrapper .bold {
   font-weight: bold;
 }
@@ -2696,6 +2701,9 @@ html {
     height: 40px;
     right: 0px;
   }
+  .page-wrapper .speaker .btn_wrapper {
+    padding-top: 80px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -3158,6 +3166,9 @@ html {
     top: -32px;
     bottom: -207px;
     right: -190px;
+  }
+  .page-wrapper .speaker .btn_wrapper {
+    padding-top: 60px;
   }
   .page-wrapper .btn_wrapper .btn.btn_violet {
     font-size: 14px;
