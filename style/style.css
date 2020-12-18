@@ -1792,6 +1792,331 @@ html {
   text-align: center;
 }
 
+.page-wrapper .cards {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-1.37%, #DEDEDE), color-stop(32.73%, rgba(223, 223, 223, 0.96788)), color-stop(68.04%, rgba(241, 241, 241, 0.410744)), color-stop(91.77%, rgba(244, 244, 244, 0.32919)), to(#FDFCFC));
+  background: -webkit-linear-gradient(left, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  background: -o-linear-gradient(left, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  background: linear-gradient(90deg, #DEDEDE -1.37%, rgba(223, 223, 223, 0.96788) 32.73%, rgba(241, 241, 241, 0.410744) 68.04%, rgba(244, 244, 244, 0.32919) 91.77%, #FDFCFC 100%);
+  padding-top: 130px;
+  padding-bottom: 250px;
+}
+
+.page-wrapper .cards::before {
+  content: " ";
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  left: 0px;
+  top: 200px;
+  background: url(./../img/cards_bg_1.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.page-wrapper .cards .cards-header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #010000;
+  padding-bottom: 80px;
+}
+
+.page-wrapper .cards .cards-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper {
+  width: 33%;
+  padding: 15px;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item {
+  border-radius: 16px;
+  padding: 70px 20px;
+  position: relative;
+  padding-bottom: 170px;
+  height: 100%;
+  -webkit-box-shadow: 0px 4px 4px #ADADAD;
+          box-shadow: 0px 4px 4px #ADADAD;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-black {
+  background-color: #000000;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-black .card-header {
+  color: #FFFFFF;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-black .card-content .card-point .text {
+  color: #ffffff;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-black .bottom-info .price {
+  color: #ffffff;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-black .bottom-info .btn-wrapper .btn {
+  border: 1px solid #F2F2F2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E858FD), color-stop(50%, #49C8FE), to(#E858FD));
+  background: -webkit-linear-gradient(top, #E858FD 0%, #49C8FE 50%, #E858FD 100%);
+  background: -o-linear-gradient(top, #E858FD 0%, #49C8FE 50%, #E858FD 100%);
+  background: linear-gradient(180deg, #E858FD 0%, #49C8FE 50%, #E858FD 100%);
+  -webkit-background-size: 200% 200%;
+          background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: background-position 0.3s ease-in;
+  -o-transition: background-position 0.3s ease-in;
+  transition: background-position 0.3s ease-in;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-black .bottom-info .btn-wrapper .btn:hover {
+  background-position: 0% 50%;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-white {
+  background-color: #FFFFFF;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-white .card-header {
+  color: #0B132A;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-white .card-content .card-point .check.check-white {
+  background: #C2C2C2;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-white .card-content .card-point .text {
+  color: #0B132A;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-white .bottom-info .price {
+  color: #0B132A;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-white .bottom-info .btn-wrapper .btn {
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#49C8FE), color-stop(50%, #E858FD), to(#49C8FE));
+  background: -webkit-linear-gradient(top, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+  background: -o-linear-gradient(top, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+  background: linear-gradient(180deg, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+  -webkit-background-size: 200% 200%;
+          background-size: 200% 200%;
+  -webkit-transition: background-position 0.3s ease-in;
+  -o-transition: background-position 0.3s ease-in;
+  transition: background-position 0.3s ease-in;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-white .bottom-info .btn-wrapper .btn:hover {
+  background-position: 0% 100%;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-bronze {
+  background-image: url(./../img/card_bronze_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-gold {
+  background-image: url(./../img/card_gold_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver {
+  position: relative;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver .card-silver-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(./../img/card_silver_bg_1.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  width: 265px;
+  height: 240px;
+  right: 0px;
+  top: 205px;
+  z-index: 10;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(./../img/card_silver_bg_2.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  width: 268px;
+  height: 574px;
+  right: 0px;
+  top: 255px;
+  z-index: 10;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: left;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 50;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content {
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 50;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 20px;
+  height: 100%;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check.check-white {
+  background: #ffffff;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check.check-pink {
+  background: #E858FD;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check.check-blue {
+  background: #49C8FE;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check .icon-arrow {
+  width: 10px;
+  height: 10px;
+  background: url(./../img/icon-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .text {
+  padding-left: 17px;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info {
+  position: absolute;
+  bottom: 48px;
+  left: 20px;
+  right: 20px;
+  z-index: 50;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 25px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .btn-wrapper {
+  text-align: center;
+}
+
+.page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .btn-wrapper .btn {
+  border-radius: 16px;
+  outline: none;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  padding: 20px;
+}
+
 .page-wrapper .bold {
   font-weight: bold;
 }
@@ -2269,6 +2594,68 @@ html {
     height: 60px;
     right: -80px;
   }
+  .page-wrapper .cards .cards-list {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper {
+    padding: 10px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item {
+    padding: 50px 15px;
+    padding-bottom: 170px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::before {
+    width: 200px;
+    height: 200px;
+    right: 0px;
+    top: 185px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::after {
+    width: 228px;
+    height: 524px;
+    right: 0px;
+    top: 205px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-header {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content {
+    padding-bottom: 20px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point {
+    padding-bottom: 20px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check .icon-arrow {
+    width: 8px;
+    height: 8px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .text {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info {
+    bottom: 40px;
+    left: 15px;
+    right: 15px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .price {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 20px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .btn-wrapper .btn {
+    font-size: 22px;
+    line-height: 28px;
+    padding: 15px;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -2703,6 +3090,77 @@ html {
   }
   .page-wrapper .speaker .btn_wrapper {
     padding-top: 80px;
+  }
+  .page-wrapper .cards {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .page-wrapper .cards .cards-header {
+    font-size: 42px;
+    line-height: 48px;
+    padding-bottom: 60px;
+  }
+  .page-wrapper .cards .cards-list {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper {
+    padding: 10px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item {
+    padding: 40px 15px;
+    padding-bottom: 150px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::before {
+    width: 150px;
+    height: 150px;
+    right: 0px;
+    top: 105px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::after {
+    width: 208px;
+    height: 484px;
+    right: 0px;
+    top: 115px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-header {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content {
+    padding-bottom: 15px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point {
+    padding-bottom: 15px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check .icon-arrow {
+    width: 8px;
+    height: 8px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .text {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info {
+    bottom: 30px;
+    left: 15px;
+    right: 15px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .price {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 20px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .btn-wrapper .btn {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 15px;
   }
 }
 
@@ -3170,6 +3628,86 @@ html {
   .page-wrapper .speaker .btn_wrapper {
     padding-top: 60px;
   }
+  .page-wrapper .cards {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  .page-wrapper .cards .cards-header {
+    font-size: 32px;
+    line-height: 38px;
+    padding-bottom: 40px;
+  }
+  .page-wrapper .cards .cards-list {
+    margin-left: -10px;
+    margin-right: -10px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper {
+    padding: 10px;
+    width: 50%;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item {
+    padding: 40px 15px;
+    padding-bottom: 150px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::before {
+    width: 150px;
+    height: 150px;
+    right: 0px;
+    top: 85px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item.card-silver::after {
+    width: 208px;
+    height: 484px;
+    right: 0px;
+    top: 95px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-header {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content {
+    padding-bottom: 15px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point {
+    padding-bottom: 15px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .check .icon-arrow {
+    width: 8px;
+    height: 8px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .card-content .card-point .text {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info {
+    bottom: 30px;
+    left: 15px;
+    right: 15px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .price {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 20px;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper .card-item .bottom-info .btn-wrapper .btn {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 15px;
+    max-width: 300px;
+  }
   .page-wrapper .btn_wrapper .btn.btn_violet {
     font-size: 14px;
     line-height: 16px;
@@ -3482,6 +4020,10 @@ html {
   }
   .page-wrapper .speaker .speaker-row .image-col .img-light-2 {
     display: none;
+  }
+  .page-wrapper .cards .cards-list .card-wrapper {
+    padding: 10px;
+    width: 100%;
   }
 }
 
