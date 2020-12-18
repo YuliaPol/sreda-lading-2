@@ -4013,7 +4013,8 @@ html {
   }
   .page-wrapper .speaker .speaker-row .image-col {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    margin: auto;
   }
   .page-wrapper .speaker .speaker-row .image-col .img-light-1 {
     display: none;
