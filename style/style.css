@@ -297,7 +297,7 @@ html {
 .page-wrapper .playLearn .playLearn_blocks .playLearn_item .playLearn_block {
   height: 100%;
   padding: 70px 30px 30px;
-  background: url(./../img/playLearn_block.png);
+  background: url(./../img/playLearn_block.jpg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -658,7 +658,7 @@ html {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  background: url(./../img/slider_bg.png);
+  background: url(./../img/slider_bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -1469,6 +1469,7 @@ html {
   position: relative;
   z-index: 50;
   width: 100%;
+  border-radius: 40px;
 }
 
 .page-wrapper .speaker .speaker-row .info-col {
@@ -1617,7 +1618,7 @@ html {
 }
 
 .page-wrapper .speaker .speaker-slider .item-wrapper .speaker-slider__item {
-  background: url(./../img/speaker-slider-bg.png);
+  background: url(./../img/speaker-slider-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -2172,7 +2173,7 @@ html {
   -webkit-box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.1);
           box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.1);
   border-radius: 12px;
-  background: url(./../img/expectations-block-bg.png);
+  background: url(./../img/expectations-block-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -2761,6 +2762,7 @@ html {
   -o-transition: box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
+  margin-left: 0px;
 }
 
 .page-wrapper .feedback .form-wrapper .form-group .input-wrapper textarea {
@@ -2784,6 +2786,8 @@ html {
   -o-transition: box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
+  margin: 0px;
+  height: 80px;
 }
 
 .page-wrapper .feedback .form-sended {

@@ -130,7 +130,7 @@ jQuery(function ($) {
         
 
         //validation
-        var formValid = document.getElementsByClassName('form-valid')[0];
+        var formValid = $('.valid-form-send').parents('form');
         $('.valid-form-send').click(function () {
             $(this).parents('form').submit(function (e) {
                 e.preventDefault();
@@ -176,24 +176,26 @@ jQuery(function ($) {
                     // setTimeout(function(){ $(formValid).addClass('sended'); }, 1000);
 
                     //hide form and show text
-                    $(formValid).fadeOut(0);
-                    $('.feedback .form-sended').fadeIn(300);
-
-
-                    var url = $(formValid).attr('action'); // the script where you handle the form input.
+                    var url = formValid.attr('action'); // the script where you handle the form input.
                     $.ajax({
                       type: "POST",
                       url: url,
                       data: $(formValid).serialize(), // serializes the form's elements.
-                      success: function(data)
-                      {
-                          alert(data); // show response from the php script.
-                      }
-                    });
+                      dataType: "json",
+                      }).done(function (data) {
+                        // данные сохранены
+                        $('.feedback .form-sended').fadeIn(300);
+                        formValid.fadeOut(0);
+                      }).fail(function (data) {
+                          // не удалось выполнить запрос к серверу
+                          console.log(data);
+                          console.log('Запрос не принят');
+                      });
                     return false; // avoid to execute the actual submit of the form.
                       // formValid.submit();
                   }
                   if (erroreArrayElemnts.length > 0) {
+                      console.log(erroreArrayElemnts);
                       console.log('Valid error');
                       return false;
                   }
