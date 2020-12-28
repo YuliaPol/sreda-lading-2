@@ -339,9 +339,8 @@ html {
             z-index: 100;
             padding-bottom: 60px;
             .queen_video {
-                width: 50%;
-                padding-right: 60px;
-                padding-top: 20px;
+                width: 60%;
+                padding-right: 30px;
                 position: relative;
                 .queen_wrraperGif {
                     position: absolute;
@@ -411,22 +410,22 @@ html {
                 }
             }
             .queen_info {
-                width: 50%;
+                width: 40%;
                 .queen_info_header {
                     font-family: $fontpage;
                     font-style: normal;
                     font-weight: 800;
-                    font-size: 32px;
-                    line-height: 39px;
+                    font-size: 30px;
+                    line-height: 34px;
                     text-transform: uppercase;
                     color: $fontcolor;
-                    padding-bottom: 25px;
+                    padding-bottom: 15px;
                 }
                 .queen_info_text {
                     font-family: $fontpage;
                     font-style: normal;
-                    font-size: 24px;
-                    line-height: 29px;
+                    font-size: 22px;
+                    line-height: 24px;
                     color: $fontcolor;
                     .bold {
                         font-weight: 700;
@@ -998,13 +997,16 @@ html {
                 width: 100%;
                 padding: 12px;
                 outline: none;
+                display: flex;
+                align-items: center;
                 img {
-                    object-fit: cover;
+                    object-fit: contain;
                     object-position: center;
                     height: 100%;
                     width: 100%;
                     border-radius: 16px;
                     border: 1px solid #EAEAEA;
+                    background: #ffffff;
                 }
             }
             .slick-track {
@@ -1454,8 +1456,8 @@ html {
             font-family: $fontpage;
             font-style: normal;
             font-weight: 800;
-            font-size: 64px;
-            line-height: 78px;
+            font-size: 46px;
+            line-height: 52px;
             text-align: center;
             text-transform: uppercase;
             color: #010000;
@@ -1662,10 +1664,14 @@ html {
                             font-family: $fontpage;
                             font-style: normal;
                             font-weight: bold;
-                            font-size: 36px;
+                            font-size: 22px;
                             line-height: 25px;
                             padding-bottom: 30px;
                             text-align: center;
+                            .currancy {
+                                vertical-align: super;
+                                font-size: smaller;
+                            }
                         }
                         .btn-wrapper {
                             text-align: center;
@@ -2033,14 +2039,28 @@ html {
             line-height: 48px;
             text-transform: uppercase;
             color: #FFFFFF;
+            padding-bottom: 10px;
+        }
+        .feedback_description {
             padding-bottom: 35px;
+            font-family: $fontpage;
+            font-style: italic;
+            font-size: 14px;
+            line-height: 18px;
+            color: #FFFFFF;
         }
         .form-wrapper {
             max-width: 600px;
             .form-row {
                 display: flex;
                 align-items: flex-start;
-                justify-content: flex-start;
+                justify-content: space-between;
+                .form-group {
+                    width: calc(50% - 15px);
+                }
+                &:last-child {
+                    justify-content: flex-start;
+                }
             }
             .btn-wrapper {
                 padding-left: 30px;
@@ -2048,7 +2068,7 @@ html {
                     background: #6C5CE7;
                     box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1), 0px 16px 32px rgba(38, 50, 56, 0.08);
                     border-radius: 16px;
-                    height: 80px;
+                    height: 48px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -2133,6 +2153,33 @@ html {
                                 background-size: contain;
                             }
                         }
+                        &.phone-wrapper {
+                            &::before {
+                                background: url(./../img/icon-phone-a.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                background-size: 20px;
+                            }
+                        }
+                        &.country-wrapper {
+                            &::before {
+                                background: url(./../img/icon-country-a.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                background-size: 20px;
+                            }
+                        }
+                        &.position-wrapper {
+                            &::before {
+                                background: url(./../img/icon-position-a.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                background-size: 20px;
+                            }
+                        }
                     }
                     &.name-wrapper {
                         &::before {
@@ -2156,6 +2203,33 @@ html {
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: contain;
+                        }
+                    }
+                    &.phone-wrapper {
+                        &::before {
+                            background: url(./../img/icon-phone.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-size: 20px;
+                        }
+                    }
+                    &.country-wrapper {
+                        &::before {
+                            background: url(./../img/icon-country.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-size: 20px;
+                        }
+                    }
+                    &.position-wrapper {
+                        &::before {
+                            background: url(./../img/icon-position.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-size: 20px;
                         }
                     }
                     input {
@@ -2253,6 +2327,36 @@ html {
         }
     }
 }
+.loader-wrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #ffffff;
+    z-index: 1000;
+}
+.loader { 
+    border: 12px solid #ffffff; 
+    border-radius: 50%; 
+    border-top: 12px solid #49C8FE; 
+    width: 70px; 
+    height: 70px; 
+    animation: spin 1s linear infinite; 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+} 
+  
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+} 
+  
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -2858,8 +2962,8 @@ html {
                             left: 15px;
                             right: 15px;
                             .price {
-                                font-size: 32px;
-                                line-height: 32px;
+                                font-size: 18px;
+                                line-height: 18px;
                                 padding-bottom: 20px;
                             }
                             .btn-wrapper {
@@ -3433,8 +3537,8 @@ html {
             padding-top: 100px;
             padding-bottom: 150px;
             .cards-header {
-                font-size: 42px;
-                line-height: 48px;
+                font-size: 38px;
+                line-height: 42px;
                 padding-bottom: 60px;
             }
             .cards-list {
@@ -3488,8 +3592,8 @@ html {
                             left: 15px;
                             right: 15px;
                             .price {
-                                font-size: 32px;
-                                line-height: 32px;
+                                font-size: 16px;
+                                line-height: 16px;
                                 padding-bottom: 20px;
                             }
                             .btn-wrapper {
@@ -4132,8 +4236,8 @@ html {
             padding-top: 80px;
             padding-bottom: 100px;
             .cards-header {
-                font-size: 32px;
-                line-height: 38px;
+                font-size: 24px;
+                line-height: 28px;
                 padding-bottom: 40px;
             }
             .cards-list {
@@ -4190,8 +4294,8 @@ html {
                             left: 15px;
                             right: 15px;
                             .price {
-                                font-size: 32px;
-                                line-height: 32px;
+                                font-size: 18px;
+                                line-height: 18px;
                                 padding-bottom: 20px;
                             }
                             .btn-wrapper {
@@ -4690,8 +4794,16 @@ html {
         .feedback {
             padding-top: 80px;
             padding-bottom: 100px;
+            .section_content {
+                max-width: 330px;
+                margin: auto;
+            }
             .form-row {
                 flex-wrap: wrap;
+                .form-group {
+                    width: 100% !important;
+                    max-width: 330px;
+                }
                 .btn-wrapper {
                     width: 100%;
                     max-width: 330px;

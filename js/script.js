@@ -227,5 +227,16 @@ jQuery(function ($) {
           }, 1000);
       });
       
+      // $(".input-phone").mask("(99) 9999-9999");
+      
     });
 });
+document.onreadystatechange = function() { 
+  if (document.readyState !== "complete") { 
+    $('.page-wrapper').fadeIn(300);
+    $('.loader-wrapper').fadeOut(300);
+  } else { 
+    $('.page-wrapper').fadeIn(0);
+    $('.loader-wrapper').fadeOut(0);
+  } 
+}; 
