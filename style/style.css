@@ -2650,6 +2650,10 @@ html {
   width: calc(50% - 15px);
 }
 
+.page-wrapper .feedback .form-wrapper .form-row .form-group.width-100 {
+  width: 100%;
+}
+
 .page-wrapper .feedback .form-wrapper .form-row:last-child {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -3092,6 +3096,143 @@ html {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.customselect-wrapper .select-hidden {
+  display: none;
+}
+
+.customselect-wrapper .checked {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 0.5px solid #C4C4C4;
+  border-radius: 50%;
+  margin-right: 5px;
+  -webkit-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+  cursor: pointer;
+}
+
+.customselect-wrapper .checked.active {
+  background: #C4C4C4;
+}
+
+.customselect-wrapper .text {
+  display: inline-block;
+}
+
+.customselect-wrapper .select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.customselect-wrapper .select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.customselect-wrapper .select-styled {
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #0B132A;
+  padding: 8px;
+  border: none;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  padding-right: 20px;
+  border-radius: 16px;
+  background: #FFFFFF;
+}
+
+.customselect-wrapper .select-styled:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  right: 10px;
+  top: calc(50% - 2.5px);
+  display: block;
+  background: url(./../img/arrow-dropdown.svg);
+  background-position: center;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.customselect-wrapper .select-styled:hover:after {
+  background: url(./../img/arrow-dropdown-a.svg);
+  background-position: center;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.customselect-wrapper .select-styled:active, .customselect-wrapper .select-styled.active {
+  border-color: #6C5CE7;
+}
+
+.customselect-wrapper .select-styled:active:after, .customselect-wrapper .select-styled.active:after {
+  background: url(./../img/arrow-dropdown-a.svg);
+  background-position: center;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.customselect-wrapper .select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #ffffff;
+  border-right: 1px solid #EEEFF3;
+  border-left: 1px solid #EEEFF3;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.customselect-wrapper .select-options li {
+  margin: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #0B132A;
+  padding: 8px;
+  border-bottom: 1px solid #EEEFF3;
+}
+
+.customselect-wrapper .select-options li:hover {
+  border-color: #6C5CE7;
 }
 
 @media screen and (max-width: 1600px) {
@@ -5007,6 +5148,11 @@ html {
   .page-wrapper .feedback .feedback_header {
     font-size: 32px;
     line-height: 36px;
+  }
+  .customselect-wrapper .select-styled,
+  .customselect-wrapper .select-options li {
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
