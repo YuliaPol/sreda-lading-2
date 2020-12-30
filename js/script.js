@@ -222,7 +222,6 @@ jQuery(function ($) {
 
         $('.feedback').on('change', '.email-wrapper input', function(e){
           let email = $(this).val();
-          console.log(email);
           if(email){
             if(!validateEmail(email)){
               $('.form-valid .email-wrapper input').parents('.form-group').find('.error-message').html('Неправильный электронный адрес');
@@ -266,7 +265,6 @@ jQuery(function ($) {
       customSelectActive();
       function customSelectActive(){
           $('.customselect').each(function(){
-            console.log('each');
               if(!$(this).hasClass('select-hidden')){
                   $(this).parent().addClass('customselect-wrapper');
                   var $this = $(this),
