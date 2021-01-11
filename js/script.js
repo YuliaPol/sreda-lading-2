@@ -1,22 +1,79 @@
 jQuery(function ($) {
     $(document).ready(function () {
 
-      $.fn.inputFilter = function(inputFilter) {
-        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
-          if (inputFilter(this.value)) {
-              this.oldValue = this.value;
-              this.oldSelectionStart = this.selectionStart;
-              this.oldSelectionEnd = this.selectionEnd;
-              } else if (this.hasOwnProperty("oldValue")) {
-              this.value = this.oldValue;
-              this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-              } else {
-              this.value = "";
+          $.fn.inputFilter = function(inputFilter) {
+            return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+              if (inputFilter(this.value)) {
+                  this.oldValue = this.value;
+                  this.oldSelectionStart = this.selectionStart;
+                  this.oldSelectionEnd = this.selectionEnd;
+                  } else if (this.hasOwnProperty("oldValue")) {
+                  this.value = this.oldValue;
+                  this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                  } else {
+                  this.value = "";
+              }
+            });
+        };
+
+        $.fn.isInViewport = function() {
+          var elementTop = $(this).offset().top;
+          var elementBottom = elementTop + $(this).outerHeight();
+          var viewportTop = $(window).scrollTop();
+          var viewportBottom = viewportTop + $(window).height();
+          return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
+
+        $('.mobile-menu').click(function(e){
+          $(this).find('.icon-menu').toggleClass('active');
+          $(this).parents('.nav-menu-wrapper').find('.nav-menu').toggleClass('active');
+        });
+
+        $(document).click(function(event) { 
+            var $target = $(event.target);
+            console.log($target.parents('.nav-menu-wrapper').length);
+            console.log($('.nav-menu').hasClass('active'));
+            if(!$target.parents('.nav-menu-wrapper').length && 
+            $('.nav-menu').hasClass('active')){
+              $('.mobile-menu').click();
+            }       
+        });
+
+        function checkBlockIntoView(){
+          if ($('.intro').isInViewport()) {
+            $('.nav-menu .menu-item').removeClass('active');
+            $('.nav-menu .menu-item.menu-for-who').addClass('active');
+          }
+          else if($('.program-section').isInViewport()) {
+            $('.nav-menu .menu-item').removeClass('active');
+            $('.nav-menu .menu-item.menu-program').addClass('active');
+          }
+          else if($('.bubbles').isInViewport()) {
+            $('.nav-menu .menu-item').removeClass('active');
+            $('.nav-menu .menu-item.menu-why-us').addClass('active');
+          }
+        }
+        $(window).scroll(function(){
+          checkBlockIntoView();
+        });
+
+        $('.nav-menu .menu-item').click(function(e){
+          if($(this).hasClass('menu-for-who')) {
+            $('html,body').animate({
+              scrollTop: $(".intro").offset().top
+           });
+          }
+          else if($(this).hasClass('menu-program')) {
+            $('html,body').animate({
+              scrollTop: $(".program-section").offset().top
+           });
+          }
+          else if($(this).hasClass('menu-why-us')) {
+            $('html,body').animate({
+              scrollTop: $(".bubbles").offset().top
+           });
           }
         });
-    };
-
-
         var queenGif = new RandomObjectMover(document.getElementsByClassName('queen_gif')[0], document.getElementsByClassName('queen_wrraperGif')[0]);
         queenGif.setSpeed(100);
         queenGif.start();
@@ -143,9 +200,6 @@ jQuery(function ($) {
               }
           ],
         });
-
-        
-
         //validation
         var formValid = $('.valid-form-send').parents('form');
         $('.valid-form-send').click(function () {

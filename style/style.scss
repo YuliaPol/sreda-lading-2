@@ -493,8 +493,8 @@ html {
             font-family: $fontpage;
             font-style: normal;
             font-weight: 800;
-            font-size: 52px;
-            line-height: 50px;
+            font-size: 64px;
+            line-height: 72px;
             text-align: center;
             text-transform: uppercase;
             text-shadow: 0px 4px 4px #000000;
@@ -2353,7 +2353,116 @@ html {
     right: 0; 
     margin: auto; 
 } 
-  
+.nav-menu-wrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1500;
+    box-shadow: -2px 8px 12px #4e4e4e;
+    background: #000000;
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .menu-item {
+            padding: 20px 25px;
+            color: #ffffff;
+            font-family: $fontpage;
+            font-size: 14px;
+            line-height: 18px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease-in;
+            cursor: pointer;
+            span {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    content: " ";
+                    width: 100%;
+                    bottom: -24px;
+                    height: 4px;
+                    background: linear-gradient(90deg,#49C8FE 0%, #E858FD 100%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in;
+                }
+            }
+            &.active,
+            &:hover {
+                opacity: 1;
+                span {
+                &::after {
+                    opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .mobile-menu {
+        display: none;
+        .icon-menu {
+            position: relative;
+            display:  inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 15px 20px;
+            &.active {
+                span {
+                    background: #00000000;
+                    transition-delay: 0s;
+                    &::before {
+                        margin-top: 0;
+                        transform: rotate(45deg);
+                        transition-delay: 0s, 0.2s;
+                    }
+                    &::after {
+                        margin-top: 0;
+                        transform: rotate(-45deg);
+                        transition-delay: 0s, 0.2s;
+                    }
+                }
+            }
+            span {
+                margin: 0 auto;
+                position: relative;
+                top: 12px;
+                width: 30px;
+                height: 4px;
+                opacity: 1;
+                background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
+                display: block;
+                transition-duration: 0s;
+                transition-delay: 0.2s;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 30px;
+                    height: 4px;
+                    background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
+                    display: block;
+                    margin-top: -12px;
+                    transition-property: margin, transform;
+                    transition-duration: 0.2s;
+                    transition-delay: 0.2s, 0s;
+                }
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 30px;
+                    height: 4px;
+                    background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
+                    display: block;
+                    margin-top: 12px;
+                    transition-property: margin, transform;
+                    transition-duration: 0.2s;
+                    transition-delay: 0.2s, 0s;
+                }
+            }
+        }
+    }
+}
 @keyframes spin { 
     100% { 
         transform: rotate(360deg); 
@@ -3200,6 +3309,18 @@ html {
             }
         }
     }
+    .nav-menu-wrapper {
+        .nav-menu {
+            .menu-item {
+                padding: 15px 15px;
+                span {
+                    &::after {
+                        bottom: -19px;
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 1100px) {
     .page-wrapper {
@@ -3391,6 +3512,15 @@ html {
                         }
                     }
                 }
+            }
+        }
+    }
+    .nav-menu-wrapper {
+        .nav-menu {
+            .menu-item {
+                padding: 15px 10px;
+                font-size: 12px;
+                line-height: 16px;
             }
         }
     }
@@ -4200,8 +4330,8 @@ html {
                 height: 200px;
             }
             .slider_header {
-                font-size: 32px;
-                line-height: 38px;
+                font-size: 42px;
+                line-height: 48px;
                 padding-bottom: 30px;
             }
             .slider_container  {
@@ -4574,6 +4704,38 @@ html {
     .customselect-wrapper .select-options li {
         font-size: 16px;
         line-height: 18px;
+    }
+    .nav-menu-wrapper {
+        .mobile-menu {
+            display: block;
+        }
+        .nav-menu {
+            position: absolute;
+            flex-direction: column;
+            background: #000;
+            width: 250px;
+            box-shadow: -2px 8px 12px #4e4e4e;
+            padding-bottom: 10px;
+            left: -260px;
+            transition: left 0.3s ease-in;
+            &.active {
+                left: 0px;
+            }
+            .menu-item {
+                padding: 10px 10px;
+                font-size: 14px;
+                line-height: 16px;
+                span {
+                    &::after {
+                        height: 2px;
+                        bottom: -12px;
+                        left: -5px;
+                        right: -5px;
+                        width: calc(100% + 10px);
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 650px) {

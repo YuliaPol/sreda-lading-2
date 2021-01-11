@@ -579,8 +579,8 @@ html {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
-  font-size: 52px;
-  line-height: 50px;
+  font-size: 64px;
+  line-height: 72px;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0px 4px 4px #000000;
@@ -2998,6 +2998,184 @@ html {
   margin: auto;
 }
 
+.nav-menu-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1500;
+  -webkit-box-shadow: -2px 8px 12px #4e4e4e;
+          box-shadow: -2px 8px 12px #4e4e4e;
+  background: #000000;
+}
+
+.nav-menu-wrapper .nav-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-menu-wrapper .nav-menu .menu-item {
+  padding: 20px 25px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.nav-menu-wrapper .nav-menu .menu-item span {
+  position: relative;
+}
+
+.nav-menu-wrapper .nav-menu .menu-item span::after {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  content: " ";
+  width: 100%;
+  bottom: -24px;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#49C8FE), to(#E858FD));
+  background: -webkit-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: -o-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.nav-menu-wrapper .nav-menu .menu-item.active, .nav-menu-wrapper .nav-menu .menu-item:hover {
+  opacity: 1;
+}
+
+.nav-menu-wrapper .nav-menu .menu-item.active span::after, .nav-menu-wrapper .nav-menu .menu-item:hover span::after {
+  opacity: 1;
+}
+
+.nav-menu-wrapper .mobile-menu {
+  display: none;
+}
+
+.nav-menu-wrapper .mobile-menu .icon-menu {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 15px 20px;
+}
+
+.nav-menu-wrapper .mobile-menu .icon-menu.active span {
+  background: #00000000;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.nav-menu-wrapper .mobile-menu .icon-menu.active span::before {
+  margin-top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0s, 0.2s;
+       -o-transition-delay: 0s, 0.2s;
+          transition-delay: 0s, 0.2s;
+}
+
+.nav-menu-wrapper .mobile-menu .icon-menu.active span::after {
+  margin-top: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition-delay: 0s, 0.2s;
+       -o-transition-delay: 0s, 0.2s;
+          transition-delay: 0s, 0.2s;
+}
+
+.nav-menu-wrapper .mobile-menu .icon-menu span {
+  margin: 0 auto;
+  position: relative;
+  top: 12px;
+  width: 30px;
+  height: 4px;
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, right top, from(#49C8FE), to(#E858FD));
+  background: -webkit-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: -o-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
+  display: block;
+  -webkit-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-menu-wrapper .mobile-menu .icon-menu span::before {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#49C8FE), to(#E858FD));
+  background: -webkit-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: -o-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
+  display: block;
+  margin-top: -12px;
+  -webkit-transition-property: margin, -webkit-transform;
+  transition-property: margin, -webkit-transform;
+  -o-transition-property: margin, -o-transform;
+  transition-property: margin, transform;
+  transition-property: margin, transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s, 0s;
+       -o-transition-delay: 0.2s, 0s;
+          transition-delay: 0.2s, 0s;
+}
+
+.nav-menu-wrapper .mobile-menu .icon-menu span::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#49C8FE), to(#E858FD));
+  background: -webkit-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: -o-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
+  background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
+  display: block;
+  margin-top: 12px;
+  -webkit-transition-property: margin, -webkit-transform;
+  transition-property: margin, -webkit-transform;
+  -o-transition-property: margin, -o-transform;
+  transition-property: margin, transform;
+  transition-property: margin, transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s, 0s;
+       -o-transition-delay: 0.2s, 0s;
+          transition-delay: 0.2s, 0s;
+}
+
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -3825,6 +4003,12 @@ html {
     font-size: 18px;
     line-height: 22px;
   }
+  .nav-menu-wrapper .nav-menu .menu-item {
+    padding: 15px 15px;
+  }
+  .nav-menu-wrapper .nav-menu .menu-item span::after {
+    bottom: -19px;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -4015,6 +4199,11 @@ html {
   .page-wrapper .bubbles .bubbles_wrrapper .bubbles_item.bubbles_item_14 .text {
     font-size: 12px;
     line-height: 14px;
+  }
+  .nav-menu-wrapper .nav-menu .menu-item {
+    padding: 15px 10px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
@@ -4799,8 +4988,8 @@ html {
     height: 200px;
   }
   .page-wrapper .slider .slider_header {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 42px;
+    line-height: 48px;
     padding-bottom: 30px;
   }
   .page-wrapper .slider .slider_container {
@@ -5153,6 +5342,41 @@ html {
   .customselect-wrapper .select-options li {
     font-size: 16px;
     line-height: 18px;
+  }
+  .nav-menu-wrapper .mobile-menu {
+    display: block;
+  }
+  .nav-menu-wrapper .nav-menu {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #000;
+    width: 250px;
+    -webkit-box-shadow: -2px 8px 12px #4e4e4e;
+            box-shadow: -2px 8px 12px #4e4e4e;
+    padding-bottom: 10px;
+    left: -260px;
+    -webkit-transition: left 0.3s ease-in;
+    -o-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in;
+  }
+  .nav-menu-wrapper .nav-menu.active {
+    left: 0px;
+  }
+  .nav-menu-wrapper .nav-menu .menu-item {
+    padding: 10px 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .nav-menu-wrapper .nav-menu .menu-item span::after {
+    height: 2px;
+    bottom: -12px;
+    left: -5px;
+    right: -5px;
+    width: calc(100% + 10px);
   }
 }
 
