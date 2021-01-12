@@ -3025,16 +3025,29 @@ html {
 }
 
 .nav-menu-wrapper .nav-menu .menu-item {
-  padding: 20px 25px;
   color: #ffffff;
   font-family: "Montserrat";
   font-size: 14px;
   line-height: 18px;
   opacity: 0.8;
-  -webkit-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
   cursor: pointer;
+}
+
+.nav-menu-wrapper .nav-menu .menu-item a {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  outline: none;
+  display: block;
+  padding: 20px 25px;
 }
 
 .nav-menu-wrapper .nav-menu .menu-item span {
@@ -3054,9 +3067,12 @@ html {
   background: -o-linear-gradient(left, #49C8FE 0%, #E858FD 100%);
   background: linear-gradient(90deg, #49C8FE 0%, #E858FD 100%);
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .nav-menu-wrapper .nav-menu .menu-item.active, .nav-menu-wrapper .nav-menu .menu-item:hover {
@@ -4003,7 +4019,7 @@ html {
     font-size: 18px;
     line-height: 22px;
   }
-  .nav-menu-wrapper .nav-menu .menu-item {
+  .nav-menu-wrapper .nav-menu .menu-item a {
     padding: 15px 15px;
   }
   .nav-menu-wrapper .nav-menu .menu-item span::after {
@@ -4200,7 +4216,7 @@ html {
     font-size: 12px;
     line-height: 14px;
   }
-  .nav-menu-wrapper .nav-menu .menu-item {
+  .nav-menu-wrapper .nav-menu .menu-item a {
     padding: 15px 10px;
     font-size: 12px;
     line-height: 16px;
@@ -5366,7 +5382,7 @@ html {
   .nav-menu-wrapper .nav-menu.active {
     left: 0px;
   }
-  .nav-menu-wrapper .nav-menu .menu-item {
+  .nav-menu-wrapper .nav-menu .menu-item a {
     padding: 10px 10px;
     font-size: 14px;
     line-height: 16px;

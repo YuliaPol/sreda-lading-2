@@ -31,8 +31,6 @@ jQuery(function ($) {
 
         $(document).click(function(event) { 
             var $target = $(event.target);
-            console.log($target.parents('.nav-menu-wrapper').length);
-            console.log($('.nav-menu').hasClass('active'));
             if(!$target.parents('.nav-menu-wrapper').length && 
             $('.nav-menu').hasClass('active')){
               $('.mobile-menu').click();
@@ -40,40 +38,20 @@ jQuery(function ($) {
         });
 
         function checkBlockIntoView(){
-          if ($('.intro').isInViewport()) {
-            $('.nav-menu .menu-item').removeClass('active');
-            $('.nav-menu .menu-item.menu-for-who').addClass('active');
-          }
-          else if($('.program-section').isInViewport()) {
-            $('.nav-menu .menu-item').removeClass('active');
-            $('.nav-menu .menu-item.menu-program').addClass('active');
-          }
-          else if($('.bubbles').isInViewport()) {
-            $('.nav-menu .menu-item').removeClass('active');
-            $('.nav-menu .menu-item.menu-why-us').addClass('active');
+          let menuItems = $('.nav-menu .menu-item');
+          for( let i = 0; i < menuItems.length; i++ ) {
+            let blockId =  $(menuItems[i]).find('a').attr('href');
+            if ($(blockId).isInViewport()) {
+              $('.nav-menu .menu-item').removeClass('active');
+              $(menuItems[i]).addClass('active');
+            }
           }
         }
+        checkBlockIntoView();
         $(window).scroll(function(){
           checkBlockIntoView();
         });
 
-        $('.nav-menu .menu-item').click(function(e){
-          if($(this).hasClass('menu-for-who')) {
-            $('html,body').animate({
-              scrollTop: $(".intro").offset().top
-           });
-          }
-          else if($(this).hasClass('menu-program')) {
-            $('html,body').animate({
-              scrollTop: $(".program-section").offset().top
-           });
-          }
-          else if($(this).hasClass('menu-why-us')) {
-            $('html,body').animate({
-              scrollTop: $(".bubbles").offset().top
-           });
-          }
-        });
         var queenGif = new RandomObjectMover(document.getElementsByClassName('queen_gif')[0], document.getElementsByClassName('queen_wrraperGif')[0]);
         queenGif.setSpeed(100);
         queenGif.start();
