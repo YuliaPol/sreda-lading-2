@@ -71,6 +71,7 @@ html {
     font-family:  $fontpage;
     color: $fontcolor;
     font-size: 16px;
+    margin-top: 50px;
     .section_content {
         padding-left: 250px;
         padding-right: 250px;
@@ -118,8 +119,7 @@ html {
             z-index: 100;
         }
         .text {
-            padding-top: 240px;
-            max-width: 690px;
+            padding-top: 180px;
             position: relative;
             z-index: 100;
             .into_header {
@@ -131,6 +131,7 @@ html {
                 text-transform: uppercase;
                 color: $fontcolor;
                 text-shadow: 0px 4px 4px #FFFFFF;
+                max-width: 690px;
             }
             .intro_info {
                 padding-top: 30px;
@@ -147,6 +148,19 @@ html {
                     }
                     .intro_value  {
                         display: inline-block;
+                    }
+                    .value-list {
+                        display: block;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 10px;
+                        .list-item {
+                            font-size: 18px;
+                            line-height: 24px;
+                            font-weight: 600;
+                            display: list-item;
+                            list-style: ' - ';
+                        }
                     }
                 }
             }
@@ -493,7 +507,7 @@ html {
             font-family: $fontpage;
             font-style: normal;
             font-weight: 800;
-            font-size: 64px;
+            font-size: 72px;
             line-height: 72px;
             text-align: center;
             text-transform: uppercase;
@@ -665,7 +679,7 @@ html {
                         font-family: $fontpage;
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 11px;
+                        font-size: 13px;
                         line-height: 20px;
                         color: #4F5665;
                         .bold {
@@ -2629,7 +2643,7 @@ html {
     .select-options {
         display: none; 
         position: absolute;
-        top: 100%;
+        top: 105%;
         right: 0;
         left: 0;
         z-index: 999;
@@ -2656,6 +2670,43 @@ html {
                 border-color: #6C5CE7;
             }
         }
+    }
+}
+.scrollup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    line-height: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.50s ease;
+    box-shadow: 0px 0px 12px #4e4e4e;;
+    cursor: pointer;
+    z-index: 1500;
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 1;
+    background: linear-gradient(180deg, #49C8FE 0%, #E858FD 50%, #49C8FE 100%);
+    background-size: 200% 200%;
+    transition: background-position 0.3s ease-in;
+    &:hover {
+        background-position: 0% 100%;
+    }
+    .arrow-up {
+        width: 30px;
+        height: 30px;
+        background: url(./../img/arrow-dropdown.svg);
+        transform: rotate(180deg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+        display: inline-block;
     }
 }
 @media screen and (max-width: 1600px) {
@@ -2948,7 +2999,7 @@ html {
                 height: 360px;
             }
             .text {
-                padding-top: 200px;
+                padding-top: 170px;
             }
             .logo {
                 left: 100px;
@@ -3037,6 +3088,9 @@ html {
                 left: 50px;
                 width: 250px;
                 height: 280px;
+            }
+            .slider_header {
+                font-size: 64px;
             }
             .slider_container  {
                 .item_wrapper {
@@ -3334,6 +3388,7 @@ html {
             }
         }
     }
+
 }
 @media screen and (max-width: 1100px) {
     .page-wrapper {
@@ -3542,6 +3597,11 @@ html {
 }
 @media screen and (max-width: 992px) {
     .page-wrapper {
+        .intro {
+            .logo {
+                left: 30px;
+            }
+        }
         .section_content {
             padding-left: 30px;
             padding-right: 30px;
@@ -4004,7 +4064,7 @@ html {
         }
         .feedback {
             padding-top: 80px;
-            padding-bottom: 100px;
+            padding-bottom: 200px;
             .feedback-bg-1 {
                 left: 30px;
                 bottom: 30px;
@@ -4238,7 +4298,7 @@ html {
                 top: 80px;
             }
             .text {
-                padding-top: 150px;
+                padding-top: 100px;
                 .into_header {
                     font-size: 32px;
                     line-height: 38px;
@@ -4247,13 +4307,21 @@ html {
                 .intro_info {
                     font-size: 16px;
                     line-height: 20px;
+                    .info_col {
+                        .value-list  {
+                            .list-item {
+                                font-size: 12px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
                 }
             }
             .logo {
-                top: 20px;
-                left: 50px;
+                top: 40px;
+                left: 30px;
                 img {
-                    width: 110px;
+                    width: 80px;
                 }
             }
         }
@@ -4702,7 +4770,6 @@ html {
         }
         .feedback {
             padding-top: 60px;
-            padding-bottom: 80px;
             .feedback-bg-1 {
                 left: 10px;
                 bottom: 20px;
@@ -4715,7 +4782,9 @@ html {
             }
         }
     }
-    .customselect-wrapper .select-styled,
+    .customselect-wrapper .select-styled {
+        font-size: 16px;
+    }
     .customselect-wrapper .select-options li {
         font-size: 16px;
         line-height: 18px;
@@ -5096,7 +5165,6 @@ html {
         }
         .feedback {
             padding-top: 80px;
-            padding-bottom: 100px;
             .section_content {
                 max-width: 330px;
                 margin: auto;

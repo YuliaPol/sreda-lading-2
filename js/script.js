@@ -351,6 +351,21 @@ jQuery(function ($) {
           });   
       }
     });
+
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    $('.scrollup').on('click', function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
 });
 document.onreadystatechange = function() { 
   if (document.readyState !== "complete") { 
